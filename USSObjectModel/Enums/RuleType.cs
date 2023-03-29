@@ -810,7 +810,7 @@ namespace Cappuccino
                                 return ruleName;
 
                             case RuleType.Variable:
-                                return "--" + ruleName;
+                                return ruleName.StartsWith("--") ? ruleName : "--" + ruleName;
 
                             case RuleType.alignContent:
                                 return "align-content";
