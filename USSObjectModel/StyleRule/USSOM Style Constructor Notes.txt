@@ -1,0 +1,143 @@
+USSOM Style Constructor Notes:
+
+--------------------------------------------<[ PREFACE ]>--------------------------------------------
+
+Where the page "USS common properties" defines a category, the folder for that category is applied.
+Any value that can be taken by a property is defined with relative commentary, including additionals if they are required.
+
+Additional notes in C# UXML include (but are not limited to):
+	- Referencing Mozilla Developer Network documentation 	[MDN CSS]
+	- Referencing Flexbox CSS Developer documentation 		[Flexbox CSS]
+	- Referencing Unity Style Sheets documentation			[Unity USS]
+
+These notes are supplied in cases where there is specific behaviour(s) attached to how StyleRule constructor parameters are used, 
+relative to their order and the amount of them. One case being where a value may take anywhere from 1 to 4 length values, in which
+case there are behaviours specific to each amount of style rules.
+
+-------------------------------------------<[ STRUCTURE ]>-------------------------------------------
+
+A majority of the properties found within Unity Style Sheets are provided in folders named exactly as to how they appear
+in the documentation page "USS Common Properties". The only exceptions are: 
+
+	- USS Properties not defined within the USS Common Properties page.
+		These are grouped based on what they affect as defined in the USS Properties Reference page.
+
+	- FlexLayout - This folder contains the two sub-folders {Items, Containers}. The split is attributed to the Unity C# comments.
+
+Below you will find every direct section for more information. If the property can take the value listed in the documentation, it can
+be provided in the represented USS Object Model constructor.
+
+-------------------------------------------<[ TABLE OF CONTENTS ]>-------------------------------------------
+
+█ _Global - Used for any keyword enumerators that are taken by multiple Style Rules.
+│
+├┈ USS Common Properties
+│
+├┈ USS Properties Reference
+│
+└┈ Mozilla Developer Network -> CSS
+
+
+█ Appearance
+│
+└┈ USS Common Properties -> Appearance
+
+
+█ Background
+│
+└┈ USS Common Properties -> Background
+
+
+█ BackgroundImage	- <Exclusive to Unity 2022.2 or later>
+│
+├┈ ▒ USS Properties Reference -> background-position
+│  └┈	Mozilla Developer Network -> CSS -> background-position
+│
+├┈ ▒ USS Properties Reference -> background-position-x
+│  └┈	Mozilla Developer Network -> CSS -> background-position-x
+│
+├┈ ▒ USS Properties Reference -> background-position-y
+│  └┈	Mozilla Developer Network -> CSS -> background-position-y
+│
+├┈ ▒ USS Properties Reference -> background-repeat
+│  └┈	Mozilla Developer Network -> CSS -> background-repeat
+│
+└┈ ▒ USS Properties Reference -> background-size
+   └┈	Mozilla Developer Network -> CSS -> background-size
+
+
+█ Borders
+│
+├┈ USS Common Properties -> Borders
+│
+└┈ ▒ USS Properties Reference -> Border Color
+   │
+   ├┈	░ ... -> Border Color -> border-bottom-color 
+   │  └┈ Mozilla Developer Network -> CSS -> border-bottom-color 
+   │  
+   ├┈	░ ... -> Border Color -> border-left-color
+   │  └┈ Mozilla Developer Network -> CSS -> border-left-color    
+   │  
+   ├┈	░... -> Border Color -> border-right-color 
+   │  └┈ Mozilla Developer Network -> CSS -> border-right-color   
+   │  
+   └┈ ░... -> Border Color -> border-top-color 
+      └┈ Mozilla Developer Network -> CSS -> border-top-color   
+
+
+█ Cursor
+│
+└┈ USS Common Properties -> Cursor
+
+
+█ Dimensions
+│
+└┈ USS Common Properties -> Dimensions
+
+
+█ FlexLayout
+│
+├┈ ▒ USS Common Properties -> Flex Layout
+│  ├┈	... -> Flex Layout -> Items
+│  └┈ ... -> Flex Layout -> Containers
+│
+└┈ CSS Tricks -> A Complete Guide to Flexbox
+
+
+█ Margins
+│
+└┈ USS Common Properties -> Margins
+
+
+█ Padding
+│
+└┈ USS Common Properties -> Padding
+
+
+█ Positioning
+│
+└┈ USS Common Properties -> Positioning
+
+
+█ Slicing
+│
+└┈ USS Common Properties -> Slicing
+
+
+█ TextProperties
+│
+├┈ USS Common Properties -> Text Properties
+│
+├┈ ▒ USS Properties Reference -> Text Overflow
+│  └┈ Mozilla Developer Network -> CSS -> text-overflow
+│
+└┈ ▒ USS Properties Reference -> Text Shadow
+   └┈ Mozilla Developer Network -> CSS -> text-shadow
+
+█ Transform
+│
+└┈ USS Transform (full page)
+
+█ Transition
+│
+└┈ USS Transition (full page)

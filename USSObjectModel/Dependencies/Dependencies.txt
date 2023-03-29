@@ -1,0 +1,10 @@
+Any folder here is prefixed with what dependency/dependencies are required for the USS Object Model to run outside of the framework that it's a part of.
+The naming structure of folders follows this: {projectName}-{dependencyFolder}.
+
+For the Iroquois USS Object Model, some of Cappuccino Framework's core files are required and are included as dependencies.
+These are:
+	- Diag.Violation
+	- Diag.FatalViolation
+	- FileHandler.ReadFile
+	- FileHandler.WriteFile
+	- CSharp.AddMultiple (add multiple values of type T to a List<T> list)

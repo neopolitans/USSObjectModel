@@ -1,0 +1,6 @@
+UNITY-2022_2-OR-NEWER
+
+The contents of this folder were accidentally written for a plugin targeting 2021.3.
+All the methods and objects only apply to 2022.2 or newer as they first appear there.
+
+Sorry for any inconvenience.
