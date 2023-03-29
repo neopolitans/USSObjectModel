@@ -71,6 +71,37 @@ namespace Cappuccino
                     }
 
                     /// <summary>
+                    /// Add a selector to the Style Sheet. <br></br>
+                    /// <see langword="Notice:"/> Pseudo-classes cannot be added.
+                    /// </summary>
+                    /// <param name="selector">The USS Selector to add to the style sheet.</param>
+                    /// <returns><see langword="boolean"/> - true if successful, false otherwise.</returns>
+                    public bool Add(Selector selector)
+                    {
+                        if (selector == null || selector.isPseudoclass || selectors.Contains(selector)) { return false; }
+                        else
+                        {
+                            selectors.Add(selector);
+                            return true;
+                        }
+                    }
+
+                    /// <summary>
+                    /// Remove a selector from the Style Sheet.
+                    /// </summary>
+                    /// <param name="selector">The USS Selector to add to the style sheet.</param>
+                    /// <returns><see langword="boolean"/> - true if successful, false otherwise.</returns>
+                    public bool Remove(Selector selector)
+                    {
+                        if (selector == null || !selectors.Contains(selector)) { return false; }
+                        else
+                        {
+                            selectors.Remove(selector);
+                            return true;
+                        }
+                    }
+
+                    /// <summary>
                     /// Translate the style sheet into an exportable .uss format.
                     /// </summary>
                     /// <returns></returns>
