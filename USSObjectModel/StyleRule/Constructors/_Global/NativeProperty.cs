@@ -18,11 +18,23 @@ namespace Cappuccino
                     /// <see langword="Cappuccino:"/> Only use this if your version of Unity Engine has one or more new property types currently not supported by the USS Object Model.
                     /// </summary>
                     /// <param name="property">The USS Property.</param>
-                    /// <param name="value">The directly supplied string value.</param>
+                    /// <param name="value">The directly specified string which will be output without change to the .uss file.</param>
                     /// <returns></returns>
                     public static StyleRule Native(string property, string value)
                     {
                         return new StyleRule(property, value, RuleType.NativeProperty);
+                    }
+
+                    /// <summary>
+                    /// Create a USS Property by hand, with a directly specified int value. <br></br><br></br>
+                    /// <see langword="Cappuccino:"/> Only use this if your version of Unity Engine has one or more new property types currently not supported by the USS Object Model.
+                    /// </summary>
+                    /// <param name="property">The USS Property.</param>
+                    /// <param name="value">The directly specified int which will be output without change to the .uss file.</param>
+                    /// <returns></returns>
+                    public static StyleRule Native(string property, int value)
+                    {
+                        return new StyleRule(property, value.ToString(), RuleType.NativeProperty);
                     }
 
                     /// <summary>
