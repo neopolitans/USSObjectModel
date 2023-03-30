@@ -230,11 +230,11 @@ An additional selector is provided with the main four types of **Simple Selector
 #### Data Type Changes
 | New Data Type | Old Data Type | Change Reason 
 | ---- | ---- | ---- |
-| ColorHex | <Color> | Color consists of several value types. ColorHex is for hexadecimal **(#RRGGBB)** values. |
-| ColorRGB | <Color> | Color consists of several value types. ColorRGB is for **rgb(0-255, 0-255, 0-255)** values. |
-| ColorRGBA | <Color> | Color consists of several value types. ColorRGBA is for **rgba(0-255, 0-255, 0-255, 0.0-1.0)** values. |
-| ColorKeyword | <Color> | Color consists of several value types. ColorKeyword is for Keywords representing a color. |
-| Duration | <Time> | UnityEngine.Time conflict. Duration is used as <Time> is a value provided for a duration of time. |
+| ColorHex | `<Color>` | Color consists of several value types. ColorHex is for hexadecimal **(#RRGGBB)** values. |
+| ColorRGB | `<Color>` | Color consists of several value types. ColorRGB is for **rgb(0-255, 0-255, 0-255)** values. |
+| ColorRGBA | `<Color>` | Color consists of several value types. ColorRGBA is for **rgba(0-255, 0-255, 0-255, 0.0-1.0)** values. |
+| ColorKeyword | `<Color>` | Color consists of several value types. ColorKeyword is for Keywords representing a color. |
+| Duration | `<Time>` | UnityEngine.Time conflict. Duration is used as <Time> is a value provided for a duration of time. |
 
 ***
 #### USS Property Changes
@@ -244,7 +244,7 @@ Finally, the C# Method Constructors for some USS Properties were changed between
 | ---- | ---- |
 | BackgroundImageTintColor(...) | -unity-background-image-tint-color: ... ; |
 | BackgroundScaleMode(...) | -unity-background-scale-mode: ... ; |
-| UnityFont(...) | -unity-font: ...; |
+| UnityFont(...) | -unity-font: ... ; |
 | UnityFontDefinition(...) | -unity-font-definition: ... ; |
 | UnityFontStyle(...) | -unity-font-style: ... ; |
 | OverflowClipBox(...) | -unity-overflow-clip-box: ... ; |
