@@ -1,5 +1,5 @@
 # Iroquois - USS Object Model
-The Iroquois USS Object Model ("USSOM") is designed to allow developers the ability to create Unity Style Sheets from within C#. We believe that you should be able to follow the editor tutorials you want without having to step out of your comfort zone. 
+The Iroquois USS Object Model ("USSOM") is designed to allow developers the ability to create Unity Style Sheets from within C#. I believe that you should be able to follow the editor tutorials you want without having to step out of your comfort zone. 
 
 Containing every style rule and every (safe) set of parameters that Unity Style Sheets, this model aims to be compliant to the USS Specification and, where necessary, the CSS3 specification that the import-export .NET library **ExCSS** abides by, which is used by Unity Technologies for importing USS files.
 
