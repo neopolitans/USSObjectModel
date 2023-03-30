@@ -324,7 +324,7 @@ At the time of writing, the USSOM only supports *Creating and Exporting* style s
 Some Style Rules provided are not available in some versions of Unity Engine, being accessible only to Unity Engine 2022.2 or newer.
     
 ## Credits
-The Iroquois USS Object Model has been created by Alexander Gilbertson. This repository contains the contents of amajor element, alongside minor elements, of a larger package currently in-development as part of University Coursework (to be released at a later date). This repository has been allowed to release early by course leaders.
+The Iroquois USS Object Model has been created by Alexander Gilbertson. This repository contains the contents of a major element, alongside minor elements, of a larger package currently in-development as part of University Coursework (to be released at a later date). This repository has been allowed to release early by course leaders.
     
 Iroquois USS Object Model makes heavy use of the following resources:
     
