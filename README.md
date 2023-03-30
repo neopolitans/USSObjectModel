@@ -322,3 +322,15 @@ Properties marked with "Any" compatibility refer to any version that has a recen
 At the time of writing, the USSOM only supports *Creating and Exporting* style sheets as a ".uss" file into a specified directory within your Unity Project's assets folder.
 
 Some Style Rules provided are not available in some versions of Unity Engine, being accessible only to Unity Engine 2022.2 or newer.
+    
+## Credits
+The Iroquois USS Object Model has been created by Alexander Gilbertson. This repository contains the contents of amajor element, alongside minor elements, of a larger package currently in-development as part of University Coursework (to be released at a later date). This repository has been allowed to release early by course leaders.
+    
+Iroquois USS Object Model makes heavy use of the following resources:
+    
+    https://docs.unity3d.com/2023.1/Documentation/Manual/UIE-USS-SupportedProperties.html
+    https://docs.unity3d.com/2023.1/Documentation/Manual/UIE-USS-Properties-Reference.html
+    https://developer.mozilla.org/en-US/docs/Web/CSS
+    https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+    https://www.w3.org/TR/2018/REC-selectors-3-20181106/#attribute-selectors
+    https://www.w3.org/TR/selectors-4/
