@@ -1,4 +1,5 @@
 using Cappuccino.Core;
+using UnityEngine;
 
 namespace Cappuccino
 {
@@ -100,13 +101,33 @@ namespace Cappuccino
                     /// <param name="variableName">The variable name.</param>
                     /// <param name="keyword">The Color Keyword being assigned to this style rule.</param>
                     /// <returns></returns>
-                    public static StyleRule Variable(string variableName, ColorKeyword keyword)
+                    public static StyleRule Variable(string variableName, USSColorKeyword keyword)
                     {
                         if (!variableName.StartsWith("--"))
                         {
                             variableName = "--" + variableName;
                         }
-                        return new StyleRule(variableName, keyword.value, RuleType.Variable);
+                        return new StyleRule(variableName, new ColorKeyword(keyword).value, RuleType.Variable);
+                    }
+
+                    /// <summary>
+                    /// Create a USS Variable, with a UnityEngine color value. <br></br>
+                    /// Providing a string prefixed with "--" is not necessary as it is added in the event the prefix is missing.
+                    /// </summary>
+                    /// <param name="variableName">The variable name.</param>
+                    /// <param name="color">The UnityEnigne color to convert to a USS-compatible rgba() function.</param>
+                    /// <returns></returns>
+                    public static StyleRule Variable(string variableName, Color color)
+                    {
+                        if (!variableName.StartsWith("--"))
+                        {
+                            variableName = "--" + variableName;
+                        }
+                        return new StyleRule(variableName, new ColorRGBA(
+                            ((byte)((int)Mathf.Clamp(color.r * 255, 0f, 255f))),
+                            ((byte)((int)Mathf.Clamp(color.g * 255, 0f, 255f))),
+                            ((byte)((int)Mathf.Clamp(color.b * 255, 0f, 255f))),
+                            color.a).value, RuleType.Variable);
                     }
                 }
             }

@@ -1,4 +1,5 @@
 using Cappuccino.Core;
+using UnityEngine;
 
 namespace Cappuccino
 {
@@ -44,9 +45,23 @@ namespace Cappuccino
                     /// Create a Unity Background Image Tint Color Style Rule with a &lt;color&gt; Keyword value.
                     /// </summary>
                     /// <param name="keyword"> The color keyword to use as a string.</param>
-                    public static StyleRule BackgroundImageTintColor(ColorKeyword keyword)
+                    public static StyleRule BackgroundImageTintColor(USSColorKeyword keyword)
                     {
-                        return new StyleRule(RuleType.unityBackgroundImageTintColor, keyword.value);
+                        return new StyleRule(RuleType.unityBackgroundImageTintColor, new ColorKeyword(keyword).value);
+                    }
+
+                    /// <summary>
+                    /// Create a Unity Background Image Tint Color Style Rule with a UnityEngine Color value.
+                    /// </summary>
+                    /// <param name="color">The UnityEnigne color to convert to a USS-compatible rgba() function.</param>
+                    /// <returns></returns>
+                    public static StyleRule BackgroundImageTintColor(Color color)
+                    {
+                        return new StyleRule(RuleType.unityBackgroundImageTintColor, new ColorRGBA(
+                            ((byte)((int)Mathf.Clamp(color.r * 255, 0f, 255f))),
+                            ((byte)((int)Mathf.Clamp(color.g * 255, 0f, 255f))),
+                            ((byte)((int)Mathf.Clamp(color.b * 255, 0f, 255f))),
+                            color.a).value);
                     }
                 }
             }

@@ -1,4 +1,5 @@
 using Cappuccino.Core;
+using UnityEngine;
 
 namespace Cappuccino
 {
@@ -14,7 +15,7 @@ namespace Cappuccino
                 public static partial class Rules
                 {
                     /// <summary>
-                    /// Create a USS Property by hand, with a directly specified string value. <br></br><br></br>
+                    /// Create a USS Property by hand with a directly specified string value. <br></br><br></br>
                     /// <see langword="Cappuccino:"/> Only use this if your version of Unity Engine has one or more new property types currently not supported by the USS Object Model.
                     /// </summary>
                     /// <param name="property">The USS Property.</param>
@@ -26,7 +27,7 @@ namespace Cappuccino
                     }
 
                     /// <summary>
-                    /// Create a USS Property by hand, with a directly specified int value. <br></br><br></br>
+                    /// Create a USS Property by hand with a directly specified int value. <br></br><br></br>
                     /// <see langword="Cappuccino:"/> Only use this if your version of Unity Engine has one or more new property types currently not supported by the USS Object Model.
                     /// </summary>
                     /// <param name="property">The USS Property.</param>
@@ -38,7 +39,7 @@ namespace Cappuccino
                     }
 
                     /// <summary>
-                    /// Create a USS Property by hand, with a Hexadecimal (#RRGGBB) value. <br></br><br></br>
+                    /// Create a USS Property by hand with a Hexadecimal (#RRGGBB) value. <br></br><br></br>
                     /// <see langword="Cappuccino:"/> Only use this if your version of Unity Engine has one or more new property types currently not supported by the USS Object Model.
                     /// </summary>
                     /// <param name="property">The USS Property.</param>
@@ -62,7 +63,7 @@ namespace Cappuccino
                     }
 
                     /// <summary>
-                    /// Create a USS Property by hand, with an rgba(r, g, b, a) USS function value. <br></br><br></br>
+                    /// Create a USS Property by hand with an rgba(r, g, b, a) USS function value. <br></br><br></br>
                     /// <see langword="Cappuccino:"/> Only use this if your version of Unity Engine has one or more new property types currently not supported by the USS Object Model.
                     /// </summary>
                     /// <param name="property">The USS Property.</param>
@@ -74,7 +75,7 @@ namespace Cappuccino
                     }
 
                     /// <summary>
-                    /// Create a USS Property by hand, with a &lt;color&gt; Keyword value. <br></br><br></br>
+                    /// Create a USS Property by hand with a &lt;color&gt; Keyword value. <br></br><br></br>
                     /// <see langword="Cappuccino:"/> Only use this if your version of Unity Engine has one or more new property types currently not supported by the USS Object Model.
                     /// </summary>
                     /// <param name="property">The USS Property.</param>
@@ -83,6 +84,36 @@ namespace Cappuccino
                     public static StyleRule Native(string property, ColorKeyword keyword)
                     {
                         return new StyleRule(property, keyword.value, RuleType.NativeProperty);
+                    }
+
+
+                    /// <summary>
+                    /// Create a USS Property by hand with a &lt;color&gt; Keyword value. <br></br><br></br>
+                    /// <see langword="Cappuccino:"/> Only use this if your version of Unity Engine has one or more new property types currently not supported by the USS Object Model.
+                    /// </summary>
+                    /// <param name="property">The USS Property.</param>
+                    /// <param name="keyword">The Color Keyword being assigned to this style rule.</param>
+                    /// <returns></returns>
+                    public static StyleRule Native(string property, USSColorKeyword keyword)
+                    {
+                        return new StyleRule(property, new ColorKeyword(keyword).value, RuleType.NativeProperty);
+
+                    }
+
+                    /// <summary>
+                    /// Create a USS Property by han  with a UnityEngine color value. <br></br><br></br>
+                    /// <see langword="Cappuccino:"/> Only use this if your version of Unity Engine has one or more new property types currently not supported by the USS Object Model.
+                    /// </summary>
+                    /// <param name="property">The variable name.</param>
+                    /// <param name="color">The UnityEnigne color to convert to a USS-compatible rgba() function.</param>
+                    /// <returns></returns>
+                    public static StyleRule Native(string property, Color color)
+                    {
+                        return new StyleRule(property, new ColorRGBA(
+                            ((byte)((int)Mathf.Clamp(color.r * 255, 0f, 255f))),
+                            ((byte)((int)Mathf.Clamp(color.g * 255, 0f, 255f))),
+                            ((byte)((int)Mathf.Clamp(color.b * 255, 0f, 255f))),
+                            color.a).value, RuleType.Variable);
                     }
                 }
             }

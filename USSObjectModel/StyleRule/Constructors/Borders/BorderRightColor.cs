@@ -1,4 +1,5 @@
 using Cappuccino.Core;
+using UnityEngine;
 
 namespace Cappuccino
 {
@@ -52,9 +53,25 @@ namespace Cappuccino
                     /// <b><i>That is to say, it might not work as intended.</i></b>
                     /// </summary>
                     /// <param name="keyword"> The color keyword to use as a string.</param>
-                    public static StyleRule BorderRightColor(ColorKeyword keyword)
+                    public static StyleRule BorderRightColor(USSColorKeyword keyword)
                     {
-                        return new StyleRule(RuleType.borderRightColor, keyword.value);
+                        return new StyleRule(RuleType.borderRightColor, new ColorKeyword(keyword).value);
+                    }
+
+                    /// <summary>
+                    /// Create a Border-Right-Color Style Rule with a UnityEngine Color value.<br></br><br></br>
+                    /// <b><see langword="Notice:"/></b> The usage of this style rule is inferred from <see langword="MDN CSS Documentation"/> with <see langword="Unity USS"/> specific color value definitions. <br></br>
+                    /// <b><i>That is to say, it might not work as intended.</i></b>
+                    /// </summary>
+                    /// <param name="color">The UnityEnigne color to convert to a USS-compatible rgba() function.</param>
+                    /// <returns></returns>
+                    public static StyleRule BorderRightColor(Color color)
+                    {
+                        return new StyleRule(RuleType.borderRightColor, new ColorRGBA(
+                            ((byte)((int)Mathf.Clamp(color.r * 255, 0f, 255f))),
+                            ((byte)((int)Mathf.Clamp(color.g * 255, 0f, 255f))),
+                            ((byte)((int)Mathf.Clamp(color.b * 255, 0f, 255f))),
+                            color.a).value);
                     }
                 }
             }

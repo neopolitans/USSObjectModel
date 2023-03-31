@@ -1,4 +1,5 @@
 using Cappuccino.Core;
+using UnityEngine;
 
 namespace Cappuccino
 {
@@ -78,9 +79,20 @@ namespace Cappuccino
                     /// <param name="offsetX">The horizontal offset of the shadow.</param>
                     /// <param name="offsetY">The vertical offset of the shadow.</param>
                     /// <param name="keyword"> The color keyword to use as a string.</param>
-                    public static StyleRule TextShadow(int offsetX, int offsetY, ColorKeyword keyword)
+                    public static StyleRule TextShadow(int offsetX, int offsetY, USSColorKeyword keyword)
                     {
-                        return new StyleRule(RuleType.textShadow, $"{new Length(offsetX)} {new Length(offsetY)} {keyword.value}");
+                        return new StyleRule(RuleType.textShadow, $"{new Length(offsetX)} {new Length(offsetY)} {new ColorKeyword(keyword).value}");
+                    }
+
+                    /// <summary>
+                    /// Create a Text-Shadow Style Rule with a UnityEngine Color value and two integers representing offsets, which get converted into pixel length values.
+                    /// </summary>
+                    /// <param name="offsetX">The horizontal offset of the shadow.</param>
+                    /// <param name="offsetY">The vertical offset of the shadow.</param>
+                    /// <param name="color">The UnityEnigne color to convert to a USS-compatible rgba() function.</param>
+                    public static StyleRule TextShadow(int offsetX, int offsetY, Color color)
+                    {
+                        return new StyleRule(RuleType.textShadow, $"{new Length(offsetX)} {new Length(offsetY)} {new ColorRGBA( ((byte)((int)Mathf.Clamp(color.r * 255, 0f, 255f))), ((byte)((int)Mathf.Clamp(color.g * 255, 0f, 255f))), ((byte)((int)Mathf.Clamp(color.b * 255, 0f, 255f))), color.a).value}");
                     }
 
                     /// <summary>
@@ -130,9 +142,22 @@ namespace Cappuccino
                     /// <param name="offsetY">The vertical offset of the shadow.</param>
                     /// <param name="blurRadius">The radius in pixels of the shadow blur.</param>
                     /// <param name="keyword"> The color keyword to use as a string.</param>
-                    public static StyleRule TextShadow(int offsetX, int offsetY, int blurRadius, ColorKeyword keyword)
+                    public static StyleRule TextShadow(int offsetX, int offsetY, int blurRadius, USSColorKeyword keyword)
                     {
-                        return new StyleRule(RuleType.textShadow, $"{new Length(offsetX)} {new Length(offsetY)} {new Length(blurRadius)} {keyword.value}");
+                        return new StyleRule(RuleType.textShadow, $"{new Length(offsetX)} {new Length(offsetY)} {new Length(blurRadius)} {new ColorKeyword(keyword).value}");
+                    }
+
+                    /// <summary>
+                    /// Create a Text-Shadow Style Rule with a UnityEngine color value and three integers. <br></br> 
+                    /// Two are representing offests on the X and Y axis while one represents blur radius. All get converted into pixel length values.
+                    /// </summary>
+                    /// <param name="offsetX">The horizontal offset of the shadow.</param>
+                    /// <param name="offsetY">The vertical offset of the shadow.</param>
+                    /// <param name="blurRadius">The radius in pixels of the shadow blur.</param>
+                    /// <param name="color">The UnityEnigne color to convert to a USS-compatible rgba() function.</param>
+                    public static StyleRule TextShadow(int offsetX, int offsetY, int blurRadius, Color color)
+                    {
+                        return new StyleRule(RuleType.textShadow, $"{new Length(offsetX)} {new Length(offsetY)} {new Length(blurRadius)} {new ColorRGBA(((byte)((int)Mathf.Clamp(color.r * 255, 0f, 255f))), ((byte)((int)Mathf.Clamp(color.g * 255, 0f, 255f))), ((byte)((int)Mathf.Clamp(color.b * 255, 0f, 255f))), color.a).value}");
                     }
 
                     /// <summary>
