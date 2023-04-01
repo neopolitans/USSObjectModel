@@ -53,7 +53,6 @@ namespace Cappuccino
                         return new StyleRule(RuleType.color, keyword.value);
                     }
 
-
                     /// <summary>
                     /// Create a Color Style Rule with a &lt;color&gt; Keyword value. <br></br><br></br>
                     /// <see langword="Unity USS:"/> This style rule sets the color of text.<br></br><br></br>
