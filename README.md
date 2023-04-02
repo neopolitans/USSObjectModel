@@ -312,7 +312,7 @@ Properties marked with "Any" compatibility refer to any version that has a recen
     Unity Engine 2018.1+: Partially Incompatible(?)    - Not Recommended
     Unity Engine 2019.1+: Partially Incompatible(?)    - Not Recommended
     Unity Engine 2020.1+: Partially Incompatible(?)    - Not Tested
-    Unity Engine 2021.1+: Comatible                    - (2021.3 Recommended)
+    Unity Engine 2021.1+: Compatible                    - (2021.3 Recommended)
     Unity Engine 2022.1+: Compatible                   - (2022.2 Known)
     Unity Engine 2023.1+: Compatbile                   - Not Tested
 ```
