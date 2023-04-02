@@ -107,7 +107,7 @@ namespace Cappuccino
                     /// Get the selector definition.
                     /// </summary>
                     /// <returns></returns>
-                    public override string Name() => name + PseudoclassString();
+                    public override string USSName() => name + PseudoclassString();
 
                     // Public Constructors
 

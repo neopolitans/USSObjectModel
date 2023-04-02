@@ -66,13 +66,13 @@ namespace Cappuccino
                     /// Create a complete name based on the underlying selectors.
                     /// </summary>
                     /// <returns></returns>
-                    public override string Name()
+                    public override string USSName()
                     {
                         string result = "";
 
                         for (int i = 0; i < underlyingSelectors.Count; i++)
                         {
-                            result += underlyingSelectors[i].Name();
+                            result += underlyingSelectors[i].USSName();
                             if (i < underlyingSelectors.Count - 1)
                             {
                                 result += ", ";

@@ -128,7 +128,7 @@ namespace Cappuccino
                     /// Get the selector definition. Defaults to object.ToString().
                     /// </summary>
                     /// <returns></returns>
-                    public virtual string Name() => ToString();
+                    public virtual string USSName() => ToString();
 
                     /// <summary>
                     /// Translate the Selector into a text format that can be saved to a .uss file.
@@ -138,7 +138,7 @@ namespace Cappuccino
                     {
                         List<string> text = new List<string>();
 
-                        text.Add(Name() + " {");
+                        text.Add(USSName() + " {");
 
                         foreach (StyleRule r in rules)
                         {
