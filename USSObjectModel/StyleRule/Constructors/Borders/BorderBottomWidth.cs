@@ -18,7 +18,7 @@ namespace Cappuccino
                     /// </summary>
                     /// <param name="length"></param>
                     /// <returns></returns>
-                    public static StyleRule BorderBottomWidth(Length length)
+                    public static StyleRule BorderBottomWidth(Len length)
                     {
                         if (length.isAuto)
                         {

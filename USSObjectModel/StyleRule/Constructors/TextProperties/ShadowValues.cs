@@ -31,7 +31,7 @@ namespace Cappuccino
                         /// <returns></returns>
                         public ShadowValue(int offsetX, int offsetY)
                         {
-                            value = $"{new Length(offsetX)} {new Length(offsetY)}";
+                            value = $"{new Len(offsetX)} {new Len(offsetY)}";
                         }
 
                         /// <summary>
@@ -45,7 +45,7 @@ namespace Cappuccino
                         /// <returns></returns>
                         public ShadowValue(int offsetX, int offsetY, int blurRadius)
                         {
-                            value = $"{new Length(offsetX)} {new Length(offsetY)} {new Length(blurRadius)}";
+                            value = $"{new Len(offsetX)} {new Len(offsetY)} {new Len(blurRadius)}";
                         }
 
                         /// <summary>
@@ -56,7 +56,7 @@ namespace Cappuccino
                         /// <param name="hexColor"> The hexadecimal color to use as a string.</param>
                         public ShadowValue(int offsetX, int offsetY, ColorHex hexColor)
                         {
-                            value = $"{new Length(offsetX)} {new Length(offsetY)} {hexColor.value}";
+                            value = $"{new Len(offsetX)} {new Len(offsetY)} {hexColor.value}";
                         }
 
                         /// <summary>
@@ -67,7 +67,7 @@ namespace Cappuccino
                         /// <param name="rgbColor"> The RGB Color to use as a string.</param>
                         public ShadowValue(int offsetX, int offsetY, ColorRGB rgbColor)
                         {
-                            value = $"{new Length(offsetX)} {new Length(offsetY)} {rgbColor.value}";
+                            value = $"{new Len(offsetX)} {new Len(offsetY)} {rgbColor.value}";
                         }
 
                         /// <summary>
@@ -78,7 +78,7 @@ namespace Cappuccino
                         /// <param name="rgbaColor"> The RGBA Color to use as a string.</param>
                         public ShadowValue(int offsetX, int offsetY, ColorRGBA rgbaColor)
                         {
-                            value = $"{new Length(offsetX)} {new Length(offsetY)} {rgbaColor.value}";
+                            value = $"{new Len(offsetX)} {new Len(offsetY)} {rgbaColor.value}";
                         }
 
                         /// <summary>
@@ -89,7 +89,7 @@ namespace Cappuccino
                         /// <param name="keyword"> The color keyword to use as a string.</param>
                         public ShadowValue(int offsetX, int offsetY, ColorKeyword keyword)
                         {
-                            value = $"{new Length(offsetX)} {new Length(offsetY)} {keyword.value}";
+                            value = $"{new Len(offsetX)} {new Len(offsetY)} {keyword.value}";
                         }
 
                         /// <summary>
@@ -100,7 +100,7 @@ namespace Cappuccino
                         /// <param name="keyword"> The color keyword to use as a string.</param>
                         public ShadowValue(int offsetX, int offsetY, USSColorKeyword keyword)
                         {
-                            value = $"{new Length(offsetX)} {new Length(offsetY)} {new ColorKeyword(keyword).value}";
+                            value = $"{new Len(offsetX)} {new Len(offsetY)} {new ColorKeyword(keyword).value}";
                         }
 
                         /// <summary>
@@ -111,7 +111,7 @@ namespace Cappuccino
                         /// <param name="color">The UnityEnigne color to convert to a USS-compatible rgba() function.</param>
                         public ShadowValue(int offsetX, int offsetY, Color color)
                         {
-                            value = $"{new Length(offsetX)} {new Length(offsetY)} {new ColorRGBA(((byte)((int)Mathf.Clamp(color.r * 255, 0f, 255f))), ((byte)((int)Mathf.Clamp(color.g * 255, 0f, 255f))), ((byte)((int)Mathf.Clamp(color.b * 255, 0f, 255f))), color.a).value}";
+                            value = $"{new Len(offsetX)} {new Len(offsetY)} {new ColorRGBA(((byte)((int)Mathf.Clamp(color.r * 255, 0f, 255f))), ((byte)((int)Mathf.Clamp(color.g * 255, 0f, 255f))), ((byte)((int)Mathf.Clamp(color.b * 255, 0f, 255f))), color.a).value}";
                         }
 
                         /// <summary>
@@ -124,7 +124,7 @@ namespace Cappuccino
                         /// <param name="hexColor"> The hexadecimal color to use as a string.</param>
                         public ShadowValue(int offsetX, int offsetY, int blurRadius, ColorHex hexColor)
                         {
-                            value = $"{new Length(offsetX)} {new Length(offsetY)} {new Length(blurRadius)} {hexColor.value}";
+                            value = $"{new Len(offsetX)} {new Len(offsetY)} {new Len(blurRadius)} {hexColor.value}";
                         }
 
                         /// <summary>
@@ -137,7 +137,7 @@ namespace Cappuccino
                         /// <param name="rgbColor"> The RGB Color to use as a string.</param>
                         public ShadowValue(int offsetX, int offsetY, int blurRadius, ColorRGB rgbColor)
                         {
-                            value = $"{new Length(offsetX)} {new Length(offsetY)} {new Length(blurRadius)} {rgbColor.value}";
+                            value = $"{new Len(offsetX)} {new Len(offsetY)} {new Len(blurRadius)} {rgbColor.value}";
                         }
 
                         /// <summary>
@@ -150,7 +150,7 @@ namespace Cappuccino
                         /// <param name="rgbaColor"> The RGBA Color to use as a string.</param>
                         public ShadowValue(int offsetX, int offsetY, int blurRadius, ColorRGBA rgbaColor)
                         {
-                            value = $"{new Length(offsetX)} {new Length(offsetY)} {new Length(blurRadius)} {rgbaColor.value}";
+                            value = $"{new Len(offsetX)} {new Len(offsetY)} {new Len(blurRadius)} {rgbaColor.value}";
                         }
 
                         /// <summary>
@@ -163,7 +163,7 @@ namespace Cappuccino
                         /// <param name="keyword"> The color keyword to use as a string.</param>
                         public ShadowValue(int offsetX, int offsetY, int blurRadius, ColorKeyword keyword)
                         {
-                            value = $"{new Length(offsetX)} {new Length(offsetY)} {new Length(blurRadius)} {keyword.value}";
+                            value = $"{new Len(offsetX)} {new Len(offsetY)} {new Len(blurRadius)} {keyword.value}";
                         }
 
                         /// <summary>
@@ -176,7 +176,7 @@ namespace Cappuccino
                         /// <param name="keyword"> The color keyword to use as a string.</param>
                         public ShadowValue(int offsetX, int offsetY, int blurRadius, USSColorKeyword keyword)
                         {
-                            value = $"{new Length(offsetX)} {new Length(offsetY)} {new Length(blurRadius)} {new ColorKeyword(keyword).value}";
+                            value = $"{new Len(offsetX)} {new Len(offsetY)} {new Len(blurRadius)} {new ColorKeyword(keyword).value}";
                         }
 
                         /// <summary>
@@ -189,7 +189,7 @@ namespace Cappuccino
                         /// <param name="color">The UnityEnigne color to convert to a USS-compatible rgba() function.</param>
                         public ShadowValue(int offsetX, int offsetY, int blurRadius, Color color)
                         {
-                            value = $"{new Length(offsetX)} {new Length(offsetY)} {new Length(blurRadius)} {new ColorRGBA(((byte)((int)Mathf.Clamp(color.r * 255, 0f, 255f))), ((byte)((int)Mathf.Clamp(color.g * 255, 0f, 255f))), ((byte)((int)Mathf.Clamp(color.b * 255, 0f, 255f))), color.a).value}";
+                            value = $"{new Len(offsetX)} {new Len(offsetY)} {new Len(blurRadius)} {new ColorRGBA(((byte)((int)Mathf.Clamp(color.r * 255, 0f, 255f))), ((byte)((int)Mathf.Clamp(color.g * 255, 0f, 255f))), ((byte)((int)Mathf.Clamp(color.b * 255, 0f, 255f))), color.a).value}";
                         }
                     }
                 }

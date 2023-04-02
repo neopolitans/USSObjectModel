@@ -18,7 +18,7 @@ namespace Cappuccino
                     /// </summary>
                     /// <param name="length"></param>
                     /// <returns></returns> 
-                    public static StyleRule PaddingTop(Length length)
+                    public static StyleRule PaddingTop(Len length)
                     {
                         if (length.isAuto)
                         {

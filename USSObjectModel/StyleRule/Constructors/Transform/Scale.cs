@@ -21,7 +21,7 @@ namespace Cappuccino
                     /// <param name="x">The scale percentage value along the X axis.</param>
                     public static StyleRule Scale(int x)
                     {
-                        return new StyleRule(RuleType.scale, new Length(x, true).ToString());
+                        return new StyleRule(RuleType.scale, new Len(x, true).ToString());
                     }
 
                     /// <summary>
@@ -42,7 +42,7 @@ namespace Cappuccino
                     /// <param name="y">The scale percentage value along the Y axis.</param>
                     public static StyleRule Scale(int x, int y)
                     {
-                        return new StyleRule(RuleType.scale, $"{new Length(x, true)} {new Length(y, true)}");
+                        return new StyleRule(RuleType.scale, $"{new Len(x, true)} {new Len(y, true)}");
                     }
 
                     /// <summary>
@@ -52,7 +52,7 @@ namespace Cappuccino
                     /// <param name="y">The scale percentage value along the Y axis.</param>
                     public static StyleRule Scale(Number x, int y)
                     {
-                        return new StyleRule(RuleType.scale, $"{x} {new Length(y, true)}");
+                        return new StyleRule(RuleType.scale, $"{x} {new Len(y, true)}");
                     }
 
                     /// <summary>
@@ -62,7 +62,7 @@ namespace Cappuccino
                     /// <param name="y">The scale floating point value along the Y axis.</param>
                     public static StyleRule Scale(int x, Number y)
                     {
-                        return new StyleRule(RuleType.scale, $"{new Length(x, true)} {y}");
+                        return new StyleRule(RuleType.scale, $"{new Len(x, true)} {y}");
                     }
 
                     /// <summary>

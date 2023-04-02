@@ -25,7 +25,7 @@ namespace Cappuccino
                     /// Create a width style rule with a length value.
                     /// </summary>
                     /// <returns></returns>
-                    public static StyleRule Width(Length length)
+                    public static StyleRule Width(Len length)
                     {
                         return new StyleRule(RuleType.width, length.ToString());
                     }

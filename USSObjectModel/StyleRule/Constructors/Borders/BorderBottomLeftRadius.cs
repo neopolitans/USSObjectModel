@@ -17,7 +17,7 @@ namespace Cappuccino
                     /// Create a Border-Bottom-Left-Radius Style Rule with a length value. <br></br><br></br>
                     /// <see langword="Cappuccino:"/> Does not support "auto".
                     /// </summary>
-                    public static StyleRule BorderBottomLeftRadius(Length length)
+                    public static StyleRule BorderBottomLeftRadius(Len length)
                     {
                         if (length.isAuto)
                         {

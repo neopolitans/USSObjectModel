@@ -25,7 +25,7 @@ namespace Cappuccino
                     /// Create a height style rule with a length value.
                     /// </summary>
                     /// <returns></returns>
-                    public static StyleRule Height(Length length)
+                    public static StyleRule Height(Len length)
                     {
                         return new StyleRule(RuleType.height, length.ToString());
                     }

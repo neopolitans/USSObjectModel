@@ -25,7 +25,7 @@ namespace Cappuccino
                     /// Create a min-height style rule with a length value.
                     /// </summary>
                     /// <returns></returns>
-                    public static StyleRule MinHeight(Length length)
+                    public static StyleRule MinHeight(Len length)
                     {
                         return new StyleRule(RuleType.minHeight, length.ToString());
                     }

@@ -26,7 +26,7 @@ namespace Cappuccino
                     /// </summary>
                     /// <param name="length"></param>
                     /// <returns></returns>
-                    public static StyleRule MarginTop(Length length)
+                    public static StyleRule MarginTop(Len length)
                     {
                         return new StyleRule(RuleType.marginTop, length.ToString());
                     }

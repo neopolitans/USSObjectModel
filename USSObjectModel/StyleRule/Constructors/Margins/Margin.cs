@@ -31,7 +31,7 @@ namespace Cappuccino
                     /// </summary>
                     /// <param name="all">The length value to apply to all margins.</param>
                     /// <returns></returns>
-                    public static StyleRule Margin(Length all)
+                    public static StyleRule Margin(Len all)
                     {
                         return new StyleRule(RuleType.margin, all.ToString());
                     }
@@ -47,7 +47,7 @@ namespace Cappuccino
                     /// <param name="vertical">The length value to apply to the top and bottom margins.</param>
                     /// <param name="horizontal">The length value to apply to the left and right margins.</param>
                     /// <returns></returns>
-                    public static StyleRule Margin(Length vertical, Length horizontal)
+                    public static StyleRule Margin(Len vertical, Len horizontal)
                     {
                         return new StyleRule(RuleType.margin, $"{vertical} {horizontal}");
                     }
@@ -64,7 +64,7 @@ namespace Cappuccino
                     /// <param name="sides">The length value to apply to the left and right margins.</param>
                     /// <param name="bottom">The length value to apply to the bottom margin.</param>
                     /// <returns></returns>
-                    public static StyleRule Margin(Length top, Length sides, Length bottom)
+                    public static StyleRule Margin(Len top, Len sides, Len bottom)
                     {
                         return new StyleRule(RuleType.margin, $"{top} {sides} {bottom}");
                     }
@@ -82,7 +82,7 @@ namespace Cappuccino
                     /// <param name="bottom">The length value to apply to the bottom margin.</param>
                     /// <param name="left">The length value to apply to the left margin.</param>
                     /// <returns></returns>
-                    public static StyleRule Margin(Length top, Length right, Length bottom, Length left)
+                    public static StyleRule Margin(Len top, Len right, Len bottom, Len left)
                     {
                         return new StyleRule(RuleType.margin, $"{top} {left} {right} {bottom}");
                     }

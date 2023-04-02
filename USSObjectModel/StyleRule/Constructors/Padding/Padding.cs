@@ -23,7 +23,7 @@ namespace Cappuccino
                     /// </summary>
                     /// <param name="all">The length value to apply to all padding sides.</param>
                     /// <returns></returns>
-                    public static StyleRule Padding(Length all)
+                    public static StyleRule Padding(Len all)
                     {
                         if (all.isAuto)
                         {
@@ -47,7 +47,7 @@ namespace Cappuccino
                     /// <param name="vertical">The length value to apply to the top and bottom padding sides.</param>
                     /// <param name="horizontal">The length value to apply to the left and right padding sides.</param>
                     /// <returns></returns>
-                    public static StyleRule Padding(Length vertical, Length horizontal)
+                    public static StyleRule Padding(Len vertical, Len horizontal)
                     {
                         if (vertical.isAuto || horizontal.isAuto)
                         {
@@ -72,7 +72,7 @@ namespace Cappuccino
                     /// <param name="sides">The length value to apply to the left and right padding sides.</param>
                     /// <param name="bottom">The length value to apply to the bottom padding side.</param>
                     /// <returns></returns>
-                    public static StyleRule Padding(Length top, Length sides, Length bottom)
+                    public static StyleRule Padding(Len top, Len sides, Len bottom)
                     {
                         if (top.isAuto || sides.isAuto || bottom.isAuto)
                         {
@@ -98,7 +98,7 @@ namespace Cappuccino
                     /// <param name="bottom">The length value to apply to the bottom padding side.</param>
                     /// <param name="left">The length value to apply to the left padding side.</param>
                     /// <returns></returns>
-                    public static StyleRule Padding(Length top, Length right, Length bottom, Length left)
+                    public static StyleRule Padding(Len top, Len right, Len bottom, Len left)
                     {
                         if (top.isAuto || right.isAuto || bottom.isAuto || left.isAuto)
                         {

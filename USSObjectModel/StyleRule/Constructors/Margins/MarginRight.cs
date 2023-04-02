@@ -26,7 +26,7 @@ namespace Cappuccino
                     /// </summary>
                     /// <param name="length"></param>
                     /// <returns></returns>
-                    public static StyleRule MarginRight(Length length)
+                    public static StyleRule MarginRight(Len length)
                     {
                         return new StyleRule(RuleType.marginRight, length.ToString());
                     }

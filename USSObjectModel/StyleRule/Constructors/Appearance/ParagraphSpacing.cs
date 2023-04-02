@@ -16,7 +16,7 @@ namespace Cappuccino
                     /// <summary>
                     /// Create a Unity Paragraph Spacing Style Rule with a length value.
                     /// </summary>
-                    public static StyleRule ParagraphSpacing(Length length)
+                    public static StyleRule ParagraphSpacing(Len length)
                     {
                         if (length.isAuto)
                         {

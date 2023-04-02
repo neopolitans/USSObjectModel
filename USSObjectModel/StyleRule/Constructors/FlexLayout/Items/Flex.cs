@@ -55,7 +55,7 @@ namespace Cappuccino
                     /// <b><i>flex</i> : {flexbasis}</b>;
                     /// </summary>
                     /// <param name="flexbasis">The number representing the flex-basis value.</param>
-                    public static StyleRule Flex(Length flexbasis)
+                    public static StyleRule Flex(Len flexbasis)
                     {
                         return new StyleRule(RuleType.flex, flexbasis.ToString());
                     }
@@ -79,7 +79,7 @@ namespace Cappuccino
                     /// </summary>
                     /// <param name="flexgrow">The number representing the flex-grow value.</param>
                     /// <param name="flexbasis">The number representing the flex-basis value.</param>
-                    public static StyleRule Flex(Number flexgrow, Length flexbasis)
+                    public static StyleRule Flex(Number flexgrow, Len flexbasis)
                     {
                         return new StyleRule(RuleType.flex, $"{flexgrow} {flexbasis}");
                     }
@@ -92,7 +92,7 @@ namespace Cappuccino
                     /// <param name="flexgrow">The number representing the flex-grow value.</param>
                     /// <param name="flexshrink">The number representing the flex-shrink value.</param>
                     /// <param name="flexbasis">The number representing the flex-basis value.</param>
-                    public static StyleRule Flex(Number flexgrow, Number flexshrink, Length flexbasis)
+                    public static StyleRule Flex(Number flexgrow, Number flexshrink, Len flexbasis)
                     {
                         return new StyleRule(RuleType.flex, $"{flexgrow} {flexshrink} {flexbasis}");
                     }

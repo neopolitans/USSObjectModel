@@ -16,7 +16,7 @@ namespace Cappuccino
                     /// <summary>
                     /// Create a Right Style Rule with a length value.
                     /// </summary>
-                    public static StyleRule Right(Length length)
+                    public static StyleRule Right(Len length)
                     {
                         return new StyleRule(RuleType.right, length.ToString());
                     }

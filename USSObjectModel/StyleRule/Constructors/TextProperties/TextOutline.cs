@@ -21,7 +21,7 @@ namespace Cappuccino
                     /// <see langword="Cappuccino:"/> This method is supplied, inferring the functionality using the <see href="https://docs.unity3d.com/2023.1/Documentation/Manual/UIE-USS-SupportedProperties.html">USS Common Properties</see>  page's description of -unity-text-outline. <br></br>
                     /// The <see href="https://docs.unity3d.com/2023.1/Documentation/Manual/UIE-USS-Properties-Reference.html">USS Properties Reference</see> page states both occur whilst the <see href="https://docs.unity3d.com/2023.1/Documentation/Manual/UIE-USS-SupportedProperties.html">USS Common Properties</see> page displays &lt;length&gt; or &lt;color&gt; must occur.
                     /// </summary>
-                    public static StyleRule TextOutline(Length length)
+                    public static StyleRule TextOutline(Len length)
                     {
                         if (length.isAuto)
                         {
@@ -88,7 +88,7 @@ namespace Cappuccino
                     /// The <see href="https://docs.unity3d.com/2023.1/Documentation/Manual/UIE-USS-SupportedProperties.html">USS Common Properties</see> page displays &lt;length&gt; or &lt;color&gt; must occur whilst the <see href="https://docs.unity3d.com/2023.1/Documentation/Manual/UIE-USS-Properties-Reference.html">USS Properties Reference</see> page states both occur.
                     /// </summary>
                     /// <param name="hexColor"> The hexadecimal color to use as a string.</param>
-                    public static StyleRule TextOutline(Length length, ColorHex hexColor)
+                    public static StyleRule TextOutline(Len length, ColorHex hexColor)
                     {
                         if (length.isAuto)
                         {
@@ -107,7 +107,7 @@ namespace Cappuccino
                     /// The <see href="https://docs.unity3d.com/2023.1/Documentation/Manual/UIE-USS-SupportedProperties.html">USS Common Properties</see> page displays &lt;length&gt; or &lt;color&gt; must occur whilst the <see href="https://docs.unity3d.com/2023.1/Documentation/Manual/UIE-USS-Properties-Reference.html">USS Properties Reference</see> page states both occur.
                     /// </summary>
                     /// <param name="rgbColor"> The RGB Color to use as a string.</param>
-                    public static StyleRule TextOutline(Length length, ColorRGB rgbColor)
+                    public static StyleRule TextOutline(Len length, ColorRGB rgbColor)
                     {
                         if (length.isAuto)
                         {
@@ -126,7 +126,7 @@ namespace Cappuccino
                     /// The <see href="https://docs.unity3d.com/2023.1/Documentation/Manual/UIE-USS-SupportedProperties.html">USS Common Properties</see> page displays &lt;length&gt; or &lt;color&gt; must occur whilst the <see href="https://docs.unity3d.com/2023.1/Documentation/Manual/UIE-USS-Properties-Reference.html">USS Properties Reference</see> page states both occur.
                     /// </summary>
                     /// <param name="rgbaColor"> The RGBA Color to use as a string.</param>
-                    public static StyleRule TextOutline(Length length, ColorRGBA rgbaColor)
+                    public static StyleRule TextOutline(Len length, ColorRGBA rgbaColor)
                     {
                         if (length.isAuto)
                         {
@@ -145,7 +145,7 @@ namespace Cappuccino
                     /// The <see href="https://docs.unity3d.com/2023.1/Documentation/Manual/UIE-USS-SupportedProperties.html">USS Common Properties</see> page displays &lt;length&gt; or &lt;color&gt; must occur whilst the <see href="https://docs.unity3d.com/2023.1/Documentation/Manual/UIE-USS-Properties-Reference.html">USS Properties Reference</see> page states both occur.
                     /// </summary>
                     /// <param name="keyword"> The color keyword to use as a string.</param>
-                    public static StyleRule TextOutline(Length length, ColorKeyword keyword)
+                    public static StyleRule TextOutline(Len length, ColorKeyword keyword)
                     {
                         if (length.isAuto)
                         {

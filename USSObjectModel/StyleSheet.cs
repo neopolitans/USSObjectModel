@@ -21,7 +21,7 @@ namespace Cappuccino
                 /// <summary>
                 /// A representation of a Unity Style Sheet as an object.
                 /// </summary>
-                public class StyleSheet
+                public class Sheet
                 {
                     /// <summary>
                     /// The name of the style sehet;
@@ -48,7 +48,7 @@ namespace Cappuccino
                     /// Create a style sheet with no selectors.
                     /// </summary>
                     /// <param name="sheetName">The name of the style sheet that will be used on export.</param>
-                    public StyleSheet(string sheetName)
+                    public Sheet(string sheetName)
                     {
                         name = sheetName;
                     }
@@ -58,7 +58,7 @@ namespace Cappuccino
                     /// </summary>
                     /// <param name="sheetName">The name of the style sheet that will be used on export.</param>
                     /// <param name="selectors">The selectors that will be placed into the style sheet.</param>
-                    public StyleSheet(string sheetName, params Selector[] selectors)
+                    public Sheet(string sheetName, params Selector[] selectors)
                     {
                         name = sheetName;
 

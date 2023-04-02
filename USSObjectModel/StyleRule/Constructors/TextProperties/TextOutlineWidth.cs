@@ -16,7 +16,7 @@ namespace Cappuccino
                     /// <summary>
                     /// Create a Unity Text Outline Width Style Rule with a length value.
                     /// </summary>
-                    public static StyleRule TextOutlineWidth(Length length)
+                    public static StyleRule TextOutlineWidth(Len length)
                     {
                         if (length.isAuto)
                         {

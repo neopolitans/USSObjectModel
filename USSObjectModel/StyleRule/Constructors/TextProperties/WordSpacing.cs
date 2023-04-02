@@ -33,7 +33,7 @@ namespace Cappuccino
                     /// <param name="spacing"> The horizontal text spacing between the charcaters.</param>
                     public static StyleRule WordSpacingng(int spacing)
                     {
-                        return new StyleRule(RuleType.wordSpacing, new Length(spacing).ToString());
+                        return new StyleRule(RuleType.wordSpacing, new Len(spacing).ToString());
                     }
                 }
             }

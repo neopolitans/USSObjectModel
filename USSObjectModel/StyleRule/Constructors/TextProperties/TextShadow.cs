@@ -23,7 +23,7 @@ namespace Cappuccino
                     /// <returns></returns>
                     public static StyleRule TextShadow(int offsetX, int offsetY)
                     {
-                        return new StyleRule(RuleType.textShadow, $"{new Length(offsetX)} {new Length(offsetY)}");
+                        return new StyleRule(RuleType.textShadow, $"{new Len(offsetX)} {new Len(offsetY)}");
                     }
 
                     /// <summary>
@@ -37,7 +37,7 @@ namespace Cappuccino
                     /// <returns></returns>
                     public static StyleRule TextShadow(int offsetX, int offsetY, int blurRadius)
                     {
-                        return new StyleRule(RuleType.textShadow, $"{new Length(offsetX)} {new Length(offsetY)} {new Length(blurRadius)}");
+                        return new StyleRule(RuleType.textShadow, $"{new Len(offsetX)} {new Len(offsetY)} {new Len(blurRadius)}");
                     }
 
                     /// <summary>
@@ -48,7 +48,7 @@ namespace Cappuccino
                     /// <param name="hexColor"> The hexadecimal color to use as a string.</param>
                     public static StyleRule TextShadow(int offsetX, int offsetY, ColorHex hexColor)
                     {
-                        return new StyleRule(RuleType.textShadow, $"{new Length(offsetX)} {new Length(offsetY)} {hexColor.value}");
+                        return new StyleRule(RuleType.textShadow, $"{new Len(offsetX)} {new Len(offsetY)} {hexColor.value}");
                     }
 
                     /// <summary>
@@ -59,7 +59,7 @@ namespace Cappuccino
                     /// <param name="rgbColor"> The RGB Color to use as a string.</param>
                     public static StyleRule TextShadow(int offsetX, int offsetY, ColorRGB rgbColor)
                     {
-                        return new StyleRule(RuleType.textShadow, $"{new Length(offsetX)} {new Length(offsetY)} {rgbColor.value}");
+                        return new StyleRule(RuleType.textShadow, $"{new Len(offsetX)} {new Len(offsetY)} {rgbColor.value}");
                     }
 
                     /// <summary>
@@ -70,7 +70,7 @@ namespace Cappuccino
                     /// <param name="rgbaColor"> The RGBA Color to use as a string.</param>
                     public static StyleRule TextShadow(int offsetX, int offsetY, ColorRGBA rgbaColor)
                     {
-                        return new StyleRule(RuleType.textShadow, $"{new Length(offsetX)} {new Length(offsetY)} {rgbaColor.value}");
+                        return new StyleRule(RuleType.textShadow, $"{new Len(offsetX)} {new Len(offsetY)} {rgbaColor.value}");
                     }
 
                     /// <summary>
@@ -81,7 +81,7 @@ namespace Cappuccino
                     /// <param name="keyword"> The color keyword to use as a string.</param>
                     public static StyleRule TextShadow(int offsetX, int offsetY, USSColorKeyword keyword)
                     {
-                        return new StyleRule(RuleType.textShadow, $"{new Length(offsetX)} {new Length(offsetY)} {new ColorKeyword(keyword).value}");
+                        return new StyleRule(RuleType.textShadow, $"{new Len(offsetX)} {new Len(offsetY)} {new ColorKeyword(keyword).value}");
                     }
 
                     /// <summary>
@@ -92,7 +92,7 @@ namespace Cappuccino
                     /// <param name="color">The UnityEnigne color to convert to a USS-compatible rgba() function.</param>
                     public static StyleRule TextShadow(int offsetX, int offsetY, Color color)
                     {
-                        return new StyleRule(RuleType.textShadow, $"{new Length(offsetX)} {new Length(offsetY)} {new ColorRGBA( ((byte)((int)Mathf.Clamp(color.r * 255, 0f, 255f))), ((byte)((int)Mathf.Clamp(color.g * 255, 0f, 255f))), ((byte)((int)Mathf.Clamp(color.b * 255, 0f, 255f))), color.a).value}");
+                        return new StyleRule(RuleType.textShadow, $"{new Len(offsetX)} {new Len(offsetY)} {new ColorRGBA( ((byte)((int)Mathf.Clamp(color.r * 255, 0f, 255f))), ((byte)((int)Mathf.Clamp(color.g * 255, 0f, 255f))), ((byte)((int)Mathf.Clamp(color.b * 255, 0f, 255f))), color.a).value}");
                     }
 
                     /// <summary>
@@ -105,7 +105,7 @@ namespace Cappuccino
                     /// <param name="hexColor"> The hexadecimal color to use as a string.</param>
                     public static StyleRule TextShadow(int offsetX, int offsetY, int blurRadius, ColorHex hexColor)
                     {
-                        return new StyleRule(RuleType.textShadow, $"{new Length(offsetX)} {new Length(offsetY)} {new Length(blurRadius)} {hexColor.value}");
+                        return new StyleRule(RuleType.textShadow, $"{new Len(offsetX)} {new Len(offsetY)} {new Len(blurRadius)} {hexColor.value}");
                     }
 
                     /// <summary>
@@ -118,7 +118,7 @@ namespace Cappuccino
                     /// <param name="rgbColor"> The RGB Color to use as a string.</param>
                     public static StyleRule TextShadow(int offsetX, int offsetY, int blurRadius, ColorRGB rgbColor)
                     {
-                        return new StyleRule(RuleType.textShadow, $"{new Length(offsetX)} {new Length(offsetY)} {new Length(blurRadius)} {rgbColor.value}");
+                        return new StyleRule(RuleType.textShadow, $"{new Len(offsetX)} {new Len(offsetY)} {new Len(blurRadius)} {rgbColor.value}");
                     }
 
                     /// <summary>
@@ -131,7 +131,7 @@ namespace Cappuccino
                     /// <param name="rgbaColor"> The RGBA Color to use as a string.</param>
                     public static StyleRule TextShadow(int offsetX, int offsetY, int blurRadius, ColorRGBA rgbaColor)
                     {
-                        return new StyleRule(RuleType.textShadow, $"{new Length(offsetX)} {new Length(offsetY)} {new Length(blurRadius)} {rgbaColor.value}");
+                        return new StyleRule(RuleType.textShadow, $"{new Len(offsetX)} {new Len(offsetY)} {new Len(blurRadius)} {rgbaColor.value}");
                     }
 
                     /// <summary>
@@ -144,7 +144,7 @@ namespace Cappuccino
                     /// <param name="keyword"> The color keyword to use as a string.</param>
                     public static StyleRule TextShadow(int offsetX, int offsetY, int blurRadius, USSColorKeyword keyword)
                     {
-                        return new StyleRule(RuleType.textShadow, $"{new Length(offsetX)} {new Length(offsetY)} {new Length(blurRadius)} {new ColorKeyword(keyword).value}");
+                        return new StyleRule(RuleType.textShadow, $"{new Len(offsetX)} {new Len(offsetY)} {new Len(blurRadius)} {new ColorKeyword(keyword).value}");
                     }
 
                     /// <summary>
@@ -157,7 +157,7 @@ namespace Cappuccino
                     /// <param name="color">The UnityEnigne color to convert to a USS-compatible rgba() function.</param>
                     public static StyleRule TextShadow(int offsetX, int offsetY, int blurRadius, Color color)
                     {
-                        return new StyleRule(RuleType.textShadow, $"{new Length(offsetX)} {new Length(offsetY)} {new Length(blurRadius)} {new ColorRGBA(((byte)((int)Mathf.Clamp(color.r * 255, 0f, 255f))), ((byte)((int)Mathf.Clamp(color.g * 255, 0f, 255f))), ((byte)((int)Mathf.Clamp(color.b * 255, 0f, 255f))), color.a).value}");
+                        return new StyleRule(RuleType.textShadow, $"{new Len(offsetX)} {new Len(offsetY)} {new Len(blurRadius)} {new ColorRGBA(((byte)((int)Mathf.Clamp(color.r * 255, 0f, 255f))), ((byte)((int)Mathf.Clamp(color.g * 255, 0f, 255f))), ((byte)((int)Mathf.Clamp(color.b * 255, 0f, 255f))), color.a).value}");
                     }
 
                     /// <summary>

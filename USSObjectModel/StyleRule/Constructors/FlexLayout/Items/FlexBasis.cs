@@ -28,7 +28,7 @@ namespace Cappuccino
                     /// <br></br><see langword="Cappuccino:"/> To create an "auto" entry, create a Length value with no parameters (or use the parameterless static constructor).
                     /// </summary>
                     /// <returns></returns>
-                    public static StyleRule FlexBasis(Length length)
+                    public static StyleRule FlexBasis(Len length)
                     {
                         return new StyleRule(RuleType.flexBasis, length.ToString());
                     }

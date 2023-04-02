@@ -16,7 +16,7 @@ namespace Cappuccino
                     /// <summary>
                     /// Create a Bottom Style Rule with a length value.
                     /// </summary>
-                    public static StyleRule Bottom(Length length)
+                    public static StyleRule Bottom(Len length)
                     {
                         return new StyleRule(RuleType.bottom, length.ToString());
                     }

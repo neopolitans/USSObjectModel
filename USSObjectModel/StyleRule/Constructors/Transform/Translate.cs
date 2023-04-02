@@ -19,7 +19,7 @@ namespace Cappuccino
                     /// <b><i>The stated "one value for two axes" behaviour may not work as <see langword="MDN CSS"/> states only X would be moved.</i></b>
                     /// </summary>
                     /// <param name="x">The translaton along the X axis in pixels or percentage.</param>
-                    public static StyleRule Translate(Length x)
+                    public static StyleRule Translate(Len x)
                     {
                         return new StyleRule(RuleType.translate, x.ToString());
                     }
@@ -29,7 +29,7 @@ namespace Cappuccino
                     /// </summary>
                     /// <param name="x">The translaton along the X axis in pixels or percentage.</param>
                     /// <param name="y">The translaton along the Y axis in pixels or percentage.</param>
-                    public static StyleRule Translate(Length x, Length y)
+                    public static StyleRule Translate(Len x, Len y)
                     {
                         return new StyleRule(RuleType.translate, $"{x} {y}");
                     }

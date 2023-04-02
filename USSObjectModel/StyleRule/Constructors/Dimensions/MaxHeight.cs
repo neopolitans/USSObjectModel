@@ -25,7 +25,7 @@ namespace Cappuccino
                     /// Create a max-height style rule with a length value.
                     /// </summary>
                     /// <returns></returns>
-                    public static StyleRule MaxHeight(Length length)
+                    public static StyleRule MaxHeight(Len length)
                     {
                         return new StyleRule(RuleType.maxHeight, length.ToString());
                     }

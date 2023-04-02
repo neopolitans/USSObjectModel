@@ -24,7 +24,7 @@ namespace Cappuccino
                     /// <br></br><see langword="Cappuccino:"/> Does not support "auto".
                     /// </summary>
                     /// <param name="all">The length value to apply to all padding sides.</param>
-                    public static StyleRule BorderRadius(Length all)
+                    public static StyleRule BorderRadius(Len all)
                     {
                         if (all.isAuto)
                         {
@@ -49,7 +49,7 @@ namespace Cappuccino
                     /// </summary>
                     /// <param name="topLeftBottomRight">The length value to apply to the top left and bottom right raidus corners.</param>
                     /// <param name="topRightAndBottomLeft">The length value to apply to the bottom left and top right raidus corners.</param>
-                    public static StyleRule BorderRadius(Length topLeftBottomRight, Length topRightAndBottomLeft)
+                    public static StyleRule BorderRadius(Len topLeftBottomRight, Len topRightAndBottomLeft)
                     {
                         if (topLeftBottomRight.isAuto || topRightAndBottomLeft.isAuto)
                         {
@@ -76,7 +76,7 @@ namespace Cappuccino
                     /// <param name="topLeft">The length value to apply to the top left raidus.</param>
                     /// <param name="topRightAndBottomLeft">The length value to apply to the top right raidus and bottom left.</param>
                     /// <param name="bottomRight">The length value to apply to the bottom right radius.</param>
-                    public static StyleRule BorderRadius(Length topLeft, Length topRightAndBottomLeft, Length bottomRight)
+                    public static StyleRule BorderRadius(Len topLeft, Len topRightAndBottomLeft, Len bottomRight)
                     {
                         if (topLeft.isAuto || topRightAndBottomLeft.isAuto || bottomRight.isAuto)
                         {
@@ -104,7 +104,7 @@ namespace Cappuccino
                     /// <param name="topRight">The length value to apply to the top right raidus.</param>
                     /// <param name="bottomRight">The length value to apply to the bottom right radius.</param>
                     /// <param name="bottomLeft">The length value to apply to the top right raidus.</param>
-                    public static StyleRule BorderRadius(Length topLeft, Length topRight, Length bottomRight, Length bottomLeft)
+                    public static StyleRule BorderRadius(Len topLeft, Len topRight, Len bottomRight, Len bottomLeft)
                     {
                         if (topLeft.isAuto || topRight.isAuto|| bottomRight.isAuto || bottomLeft.isAuto)
                         {

@@ -25,7 +25,7 @@ namespace Cappuccino
                     /// Create a max-width style rule with a length value.
                     /// </summary>
                     /// <returns></returns>
-                    public static StyleRule MaxWidth(Length length)
+                    public static StyleRule MaxWidth(Len length)
                     {
                         return new StyleRule(RuleType.maxWidth, length.ToString());
                     }

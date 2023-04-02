@@ -59,7 +59,7 @@ namespace Cappuccino
                     /// <param name="x">The x coordinate of the transform origin.</param>
                     /// <param name="y">The y coordinate of the transform origin.</param>
                     /// <returns></returns>
-                    public static StyleRule TransformOrigin(Length x, Length y)
+                    public static StyleRule TransformOrigin(Len x, Len y)
                     {
                         if (x.isAuto || y.isAuto)
                         {

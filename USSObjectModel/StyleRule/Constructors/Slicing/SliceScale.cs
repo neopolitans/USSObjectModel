@@ -17,7 +17,7 @@ namespace Cappuccino
                     /// Create a Unity-Slice-Scale Style Rule with a length value. <br></br><br></br>
                     /// <see langword="Cappuccino:"/> Does not support "auto".
                     /// </summary>
-                    public static StyleRule SliceScale(Length length)
+                    public static StyleRule SliceScale(Len length)
                     {
                         if (length.isAuto)
                         {

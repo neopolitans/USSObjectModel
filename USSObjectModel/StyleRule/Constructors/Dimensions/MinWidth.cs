@@ -25,7 +25,7 @@ namespace Cappuccino
                     /// Create a min-width style rule with a length value.
                     /// </summary>
                     /// <returns></returns>
-                    public static StyleRule MinWidth(Length length)
+                    public static StyleRule MinWidth(Len length)
                     {
                         return new StyleRule(RuleType.minWidth, length.ToString());
                     }
