@@ -145,7 +145,7 @@ Compatible Selectors - The other selectors that the selector can contain specifi
 ```
 ***
 
-**Selectors**
+**Selector**
 
 The base class that any and all Selectors derive from, containing a majority of the core functions which all inheriting selectors derive from or override with unique methods. These cannot be constructed and serve as a general container which you can store various selectors in.
 
