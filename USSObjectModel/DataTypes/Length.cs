@@ -27,7 +27,7 @@ namespace Cappuccino
                     /// <summary>
                     /// The integer value that will be represented in the &lt;length&gt; data type.
                     /// </summary>
-                    public int value;
+                    public object value;
 
                     /// <summary>
                     /// Whether or not the integer value represents a percentage (e.g. 50%).
@@ -61,11 +61,27 @@ namespace Cappuccino
                         isPercent = false;
                     }
 
+                    public Len(float value)
+                    {
+                        this.value = value;
+                        isPercent = false;
+                    }
+
                     /// <summary>
                     /// Create a &lt;length&gt; object with integer value and a bool value to determine whether or not it is a percentage. <br></br>
                     /// When ToString is called, it will return a percentage if the bool value is true (e.g. 50%), otherwise it will return a pixels value (e.g. 50px).
                     /// </summary>
                     public Len(int value, bool isPercentage)
+                    {
+                        this.value = value;
+                        this.isPercent = isPercentage;
+                    }
+
+                    /// <summary>
+                    /// Create a &lt;length&gt; object with integer value and a bool value to determine whether or not it is a percentage. <br></br>
+                    /// When ToString is called, it will return a percentage if the bool value is true (e.g. 50%), otherwise it will return a pixels value (e.g. 50px).
+                    /// </summary>
+                    public Len(float value, bool isPercentage)
                     {
                         this.value = value;
                         this.isPercent = isPercentage;
@@ -80,6 +96,7 @@ namespace Cappuccino
                         return isAuto ? "auto" : isPercent ? $"{value}%" : $"{value}px";
                     }
                 }
+
 
             }
         }
