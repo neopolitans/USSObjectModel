@@ -26,7 +26,7 @@ using Cappuccino.Interpreters.Languages.USS;
 
 USS Object Model follows the same general concept as USS. Creating a style sheet starts with defining a style sheet itself:
 ```C#
-StyleSheet sheet = new StyleSheet("myStyleSheet"); 
+Sheet sheet = new Sheet("myStyleSheet"); 
     // Create a Unity Style Sheet named "myStyleSheet".
 ```
 The next step is to define a **USS Selector** ("SimpleSelector", "ComplexSelector" or "SelectorList") and a **USS Property** ("StyleRule"). As a demonstration, we'll be adding some related to Unity's GraphView API (a common use-case):
@@ -145,7 +145,7 @@ Compatible Selectors - The other selectors that the selector can contain specifi
 ```
 ***
 
-**Selectors**
+**Selector**
 
 The base class that any and all Selectors derive from, containing a majority of the core functions which all inheriting selectors derive from or override with unique methods. These cannot be constructed and serve as a general container which you can store various selectors in.
 
@@ -234,7 +234,8 @@ An additional selector is provided with the main four types of **Simple Selector
 | ColorRGB | `<Color>` | Color consists of several value types. ColorRGB is for **rgb(0-255, 0-255, 0-255)** values. |
 | ColorRGBA | `<Color>` | Color consists of several value types. ColorRGBA is for **rgba(0-255, 0-255, 0-255, 0.0-1.0)** values. |
 | ColorKeyword | `<Color>` | Color consists of several value types. ColorKeyword is for Keywords representing a color. |
-| Duration | `<Time>` | UnityEngine.Time conflict. Duration is used as <Time> is a value provided for a duration of time. |
+| Len | `<Length>` | UnityEngine.UIElements.Length conflict. **Temporary** |
+| Duration | `<Time>` | UnityEngine.Time conflict. The name `Duration` is used as `<Time>` represents duration of time. |
 
 ***
 #### USS Property Changes
@@ -311,7 +312,7 @@ Properties marked with "Any" compatibility refer to any version that has a recen
     Unity Engine 2018.1+: Partially Incompatible(?)    - Not Recommended
     Unity Engine 2019.1+: Partially Incompatible(?)    - Not Recommended
     Unity Engine 2020.1+: Partially Incompatible(?)    - Not Tested
-    Unity Engine 2021.1+: Comatible                    - (2021.3 Recommended)
+    Unity Engine 2021.1+: Compatible                    - (2021.3 Recommended)
     Unity Engine 2022.1+: Compatible                   - (2022.2 Known)
     Unity Engine 2023.1+: Compatbile                   - Not Tested
 ```
