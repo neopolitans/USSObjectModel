@@ -45,7 +45,7 @@ namespace Cappuccino
                         /// </summary>
                         public ImagePosition(Length length)
                         {
-                            if (length.isAuto)
+                            if (length.IsAuto())
                             {
                                 Diag.Violation("ImagePosition objects do not support the \"auto\" keyword. This style rule has been marked as invalid.");
                                 valid = false;
@@ -65,7 +65,7 @@ namespace Cappuccino
                         /// <param name="y">The offset from top side.</param>
                         public ImagePosition(Length x, Length y)
                         {
-                            if (x.isAuto || y.isAuto)
+                            if (x.IsAuto() || y.IsAuto())
                             {
                                 Diag.Violation("ImagePosition objects do not support the \"auto\" keyword. This style rule has been marked as invalid.");
                                 valid = false;
@@ -87,7 +87,7 @@ namespace Cappuccino
                         /// <param name="length">The offset from other axis side. If the keyword is an X axis keyword (left/right), this will apply to the Y axis and vice versa.</param>
                         public ImagePosition(AlignmentMultiple keyword, Length length)
                         {
-                            if (length.isAuto)
+                            if (length.IsAuto())
                             {
                                 Diag.Violation("ImagePosition objects do not support the \"auto\" keyword. This style rule has been marked as invalid.");
                                 valid = false;
@@ -109,7 +109,7 @@ namespace Cappuccino
                         /// <param name="keyword">The keyword that defines one of the axis sides which the image will be placed against.</param>
                         public ImagePosition(Length length, AlignmentMultiple keyword)
                         {
-                            if (length.isAuto)
+                            if (length.IsAuto())
                             {
                                 Diag.Violation("ImagePosition objects do not support the \"auto\" keyword. This style rule has been marked as invalid.");
                                 valid = false;
@@ -140,7 +140,7 @@ namespace Cappuccino
                             }
                             else
                             {
-                                if (length.isAuto)
+                                if (length.IsAuto())
                                 {
                                     Diag.Violation("ImagePosition objects do not support the \"auto\" keyword. This style rule has been marked as invalid.");
                                     valid = false;
@@ -172,7 +172,7 @@ namespace Cappuccino
                             }
                             else
                             {
-                                if (length.isAuto)
+                                if (length.IsAuto())
                                 {
                                     Diag.Violation("ImagePosition objects do not support the \"auto\" keyword. This style rule has been marked as invalid.");
                                     valid = false;
@@ -205,7 +205,7 @@ namespace Cappuccino
                             }
                             else
                             {
-                                if (firstLength.isAuto || secondLength.isAuto)
+                                if (firstLength.IsAuto() || secondLength.IsAuto())
                                 {
                                     Diag.Violation("ImagePosition objects do not support the \"auto\" keyword. This style rule has been marked as invalid.");
                                     valid = false;

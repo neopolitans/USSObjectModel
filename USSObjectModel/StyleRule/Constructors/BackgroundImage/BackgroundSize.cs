@@ -1,5 +1,6 @@
 #if UNITY_2022_2_OR_NEWER
 using Cappuccino.Core;
+using UnityEngine.UIElements;
 
 namespace Cappuccino
 {

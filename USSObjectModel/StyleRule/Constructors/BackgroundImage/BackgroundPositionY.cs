@@ -1,5 +1,6 @@
 #if UNITY_2022_2_OR_NEWER
 using Cappuccino.Core;
+using UnityEngine.UIElements;
 
 namespace Cappuccino
 {
@@ -96,7 +97,7 @@ namespace Cappuccino
                         /// </summary>
                         public ImagePositionY(Length length)
                         {
-                            if (length.isAuto)
+                            if (length.IsAuto())
                             {
                                 Diag.Violation("ImagePositionY objects do not support the \"auto\" keyword. This style rule has been marked as invalid.");
                                 valid = false;
@@ -116,7 +117,7 @@ namespace Cappuccino
                         /// </summary>
                         public ImagePositionY(ImageAlignmentY keyword, Length length)
                         {
-                            if (length.isAuto)
+                            if (length.IsAuto())
                             {
                                 Diag.Violation("ImagePositionY objects do not support the \"auto\" keyword. This style rule has been marked as invalid.");
                                 valid = false;
@@ -147,7 +148,7 @@ namespace Cappuccino
                     /// </summary>
                     public static StyleRule BackgroundPositionY(Length length)
                     {
-                        if (length.isAuto)
+                        if (length.IsAuto())
                         {
                             Diag.Violation("background-position-y rules do not support the \"auto\" keyword. This style rule has been marked as invalid.");
                             return new StyleRule(RuleType.backgroundPositionY, length.ToString(), false);
@@ -168,7 +169,7 @@ namespace Cappuccino
                     /// <param name="length">The offset from the specified alignment keyword.</param>
                     public static StyleRule BackgroundPositionY(ImageAlignmentY keyword, Length length)
                     {
-                        if (length.isAuto)
+                        if (length.IsAuto())
                         {
                             Diag.Violation("background-position-y rules do not support the \"auto\" keyword. This style rule has been marked as invalid.");
                             return new StyleRule(RuleType.backgroundPositionY, $"{keyword.Name()} {length}", false);
